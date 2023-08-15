@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-cente">
+  <img
+    [src]="url"
+    [alt]="alt"
+    class="card-img-top animate__animated animate__shakeY"
+    (load)="onLoad()"
+    [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
+  />
+
+  <img
+    *ngIf="!hasLoaded"
+    src="assets/loader.svg"
+    height="50%"
+    width="50%"
+    class="mx-auto d-block"
+    alt=""
+  />
+</div>
